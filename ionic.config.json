@@ -1,0 +1,7 @@
+{
+  "name": "lamejorapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
