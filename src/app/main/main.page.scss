@@ -1,0 +1,34 @@
+/* home.page.scss */
+ion-content {
+  position: relative;
+  min-height: 100vh; /* Asegura que el contenido ocupe al menos la altura completa de la pantalla */
+  width: 100%;
+  background: none;
+}
+
+
+ion-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #000000 0%, #ffffff 100%);
+  filter: brightness(30%) saturate(50%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+}
+
+/* Estilo para el botón */
+ion-button[slot='fixed'] {
+  background-color: #ffffff;
+  color: blue;
+  border-radius: 1px;
+  border-color: red;
+  z-index: 1;
+  position: fixed; /* Asegura que el botón esté encima del pseudo-elemento */
+  top: 50%;
+  right: 20px;
+}
